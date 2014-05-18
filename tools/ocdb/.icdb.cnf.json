@@ -1,0 +1,9 @@
+{
+  "_comment": "ICDB configuration file.",
+  "config": {
+    "image_root_dir": "/data/workspace/git/github.com.spreadcat.octopress-cdb/images",
+    "db_name": "images",
+    "db_host": "127.0.0.1",
+    "db_port": "5984"
+  }
+}
