@@ -19,9 +19,9 @@ module Couch
     end
 
     def listdbs ()
-      request(Net::HTTP::Get.new("/_all_dbs"))
+      request(Net::HTTP::Get.new("/_all_dbs/"))
     end
-    
+
     def put(uri, json)
       req = Net::HTTP::Put.new(uri)
       req["content-type"] = "application/json"

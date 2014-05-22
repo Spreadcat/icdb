@@ -4,7 +4,9 @@
 #
 # TODO: Read: http://www.slideshare.net/timanglade/couchdb-ruby-youre-doing-it-wrong
 
+require 'rubygems'
 require 'json'
+require 'couchrest'
 require 'net/http'
 require './couchdb.mod.rb'
 
@@ -80,14 +82,15 @@ end
 #
 # Check if database is existing
 #   If not: create it
-server  = Couch::Server.new( config['config']['db_host'] , config['config']['db_port'] )
-all_dbs = server.listdbs()
+@db = CouchRest.database!(config['config']['db_host'] + ':' + config['config']['db_port'] + "/couchrest-test")
+#server  = Couch::Server.new( config['config']['db_host'] , config['config']['db_port'] )
+#all_dbs = server.listdbs()
 
-  
-  
+#all_dbs.each do |d|
+#  puts d
+#end
 
 
-
-puts "\n\nCurrent config:"
+puts "=====\nCurrent config:"
 puts config
 
